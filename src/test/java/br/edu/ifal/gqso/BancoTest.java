@@ -19,4 +19,9 @@ public class BancoTest {
     public void saldoTest(){
         assertEquals(200, banco.saldo());
     }
+
+    @Test
+    public void saqueTest(){
+        
+    }
 }
