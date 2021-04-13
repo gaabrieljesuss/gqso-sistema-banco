@@ -8,6 +8,7 @@ public class Banco {
     }
 
 
+
     public double saldo(){
         return this.saldo;
     }
@@ -16,8 +17,10 @@ public class Banco {
         this.saldo = saldo;
     }
 
-    public double saque(double valor) {
-        
+    public double saque(double valor) throws SaldoInsuficiente{
+        if(valor > saldo()){
+            throw new SaldoInsuficiente();
+        }
         setSaldo(saldo() - valor);
         return saldo();
     }
