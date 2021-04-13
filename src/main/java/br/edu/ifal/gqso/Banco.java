@@ -13,6 +13,6 @@ public class Banco {
 
     public double saque(double valor){
         setSaldo(saldo() - valor);
-        return 0;
+        return saldo();
     }
 }
