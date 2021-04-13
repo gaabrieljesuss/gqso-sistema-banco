@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import br.edu.ifal.gqso.Banco.SaldoInsuficiente;
+import br.edu.ifal.gqso.Banco.ValorNegativo;
 
 public class BancoTest {
     private Banco banco;
@@ -24,7 +25,7 @@ public class BancoTest {
     }
 
     @Test
-    public void saqueTest() throws SaldoInsuficiente {
+    public void saqueTest() throws SaldoInsuficiente, ValorNegativo{
         assertEquals(150, banco.saque(50));
         assertThrows(Banco.SaldoInsuficiente.class, () -> banco.saque(250));
         assertEquals(250, banco.saque(-50));

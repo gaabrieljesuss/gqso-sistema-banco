@@ -19,12 +19,14 @@ public class Banco {
         this.saldo = saldo;
     }
 
-    public double saque(double valor) throws SaldoInsuficiente{
+    public double saque(double valor) throws SaldoInsuficiente, ValorNegativo{
         if(valor > saldo()){
             throw new SaldoInsuficiente();
         }
 
-        
+        if(valor < 0){
+            throw new ValorNegativo();
+        }
         setSaldo(saldo() - valor);
         return saldo();
     }
