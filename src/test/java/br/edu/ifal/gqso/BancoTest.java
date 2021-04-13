@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
+
 public class BancoTest {
     private Banco banco;
 
@@ -21,7 +23,8 @@ public class BancoTest {
     }
 
     @Test
-    public void saqueTest(){
+    public void saqueTest()  {
         assertEquals(150, banco.saque(50));
+        assertEquals(-50, banco.saque(250));
     }
 }
