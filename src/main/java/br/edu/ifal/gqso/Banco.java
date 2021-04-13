@@ -8,6 +8,11 @@ public class Banco {
     }
     
     public void setSaldo(double saldo){
-         this.saldo = saldo;
+        this.saldo = saldo;
+    }
+
+    public double saque(double valor){
+        setSaldo(saldo() - valor);
+        return 0;
     }
 }
