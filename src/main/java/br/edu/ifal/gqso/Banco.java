@@ -33,6 +33,6 @@ public class Banco {
 
     public double deposito(double valor){
         setSaldo(saldo() + valor);
-        return 0;
+        return saldo();
     }
 }
