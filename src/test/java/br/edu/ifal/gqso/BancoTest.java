@@ -34,7 +34,7 @@ public class BancoTest {
     @Test
     public void depositoTest() throws ValorNegativo{
         assertEquals(300, banco.deposito(100));
-        assertEquals(100, banco.deposito(-100));
+        assertThrows(Banco.ValorNegativo.class, () -> banco.deposito(-100));
     }
 
 }
