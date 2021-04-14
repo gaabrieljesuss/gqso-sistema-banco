@@ -30,4 +30,10 @@ public class BancoTest {
         assertThrows(Banco.SaldoInsuficiente.class, () -> banco.saque(250));
         assertThrows(Banco.ValorNegativo.class, () -> banco.saque(-50));
     }
+
+    @Test
+    public void depositoTest(){
+        
+    }
+
 }
