@@ -34,6 +34,7 @@ public class BancoTest {
     @Test
     public void depositoTest(){
         assertEquals(300, banco.deposito(100));
+        assertEquals(100, banco.deposito(-100));
     }
 
 }
