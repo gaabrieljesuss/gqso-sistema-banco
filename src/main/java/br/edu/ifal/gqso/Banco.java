@@ -15,7 +15,10 @@ public class Banco {
         return this.saldo;
     }
     
-    public void setSaldo(double saldo){
+    public void setSaldo(double saldo) throws ValorNegativo{
+        if(saldo < 0){
+            throw new ValorNegativo();
+        }
         this.saldo = saldo;
     }
 

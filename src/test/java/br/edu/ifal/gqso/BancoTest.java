@@ -14,7 +14,7 @@ public class BancoTest {
 
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() throws ValorNegativo{
         this.banco = new Banco();
         banco.setSaldo(200);
     }
